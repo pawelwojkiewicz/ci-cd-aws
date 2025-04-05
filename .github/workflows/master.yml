@@ -1,0 +1,28 @@
+name: Angular App CI  # 👈 Fixed: "name" should not have a colon after it
+
+on:
+  workflow_dispatch:  # Allows manual triggering
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout repository
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      # Install Node.js (reads version from .nvmrc)
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version-file: ".nvmrc"  # Ensure .nvmrc exists in your repo!
+
+      # Install dependencies
+      - name: Install dependencies
+        run: npm ci
+
+      # Start the project (optional: only for testing)
+      - name: Start Angular app
+        run: npm start
+        env:
+          NODE_ENV: development  # Recommended for `npm start`
