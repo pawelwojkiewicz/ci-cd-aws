@@ -24,3 +24,7 @@ jobs:
       # Start the project (optional: only for testing)
       - name: Build app
         run: npm run build
+
+      # Start the project (optional: only for testing)
+      - name: test
+        run: npm run test
