@@ -1,7 +1,7 @@
 name: Request on pull request  # 👈 Fixed: "name" should not have a colon after it
 
 on:
-  pull_request:  # Allows manual triggering
+  pull_request:  # push
 
 jobs:
   test:
