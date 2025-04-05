@@ -23,6 +23,4 @@ jobs:
 
       # Start the project (optional: only for testing)
       - name: Build app
-        run: npm build
-        env:
-          NODE_ENV: development  # Recommended for `npm start`
+        run: npm run build
