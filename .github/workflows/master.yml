@@ -1,7 +1,7 @@
-name: Angular App CI  # 👈 Fixed: "name" should not have a colon after it
+name: Request on pull request  # 👈 Fixed: "name" should not have a colon after it
 
 on:
-  workflow_dispatch:  # Allows manual triggering
+  pull_request:  # Allows manual triggering
 
 jobs:
   test:
@@ -21,10 +21,12 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+        # Start the project (optional: only for testing)
+      - name: test
+        run: npm run test
+
       # Start the project (optional: only for testing)
       - name: Build app
         run: npm run build
 
-      # Start the project (optional: only for testing)
-      - name: test
-        run: npm run test
+
