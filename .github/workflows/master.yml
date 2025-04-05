@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       # Start the project (optional: only for testing)
-      - name: Start Angular app
-        run: npm start
+      - name: Build app
+        run: npm build
         env:
           NODE_ENV: development  # Recommended for `npm start`
