@@ -1,7 +1,7 @@
 name: Request on pull request  # 👈 Fixed: "name" should not have a colon after it
 
 on:
-  pull_request:  # Allows manual triggering
+  pull_request:  # push
 
 jobs:
   test:
@@ -20,11 +20,6 @@ jobs:
       # Install dependencies
       - name: Install dependencies
         run: npm ci
-
-      - name: Install Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
 
         # Start the prroject (optional: only for testing)
       - name: test
