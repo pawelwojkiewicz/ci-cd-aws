@@ -21,11 +21,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Install Chrome
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y chromium-browser
-
         # Start the prroject (optional: only for testing)
       - name: test
         run: npm run test
