@@ -1,4 +1,4 @@
-name: Request on pull request  # 👈 Fixed: "name" should not have a colon after it
+name: on push master  # 👈 Fixed: "name" should not have a colon after it
 
 on:
   push:
