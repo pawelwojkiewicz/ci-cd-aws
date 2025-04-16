@@ -1,9 +1,7 @@
 name: on push master  # 👈 Fixed: "name" should not have a colon after it
 
 on:
-  push:
-    branches:
-      - master
+  workflow_dispatch:
 
 jobs:
   test:
