@@ -52,7 +52,7 @@ jobs:
         run: |
            aws lambda update-function-code \
              --function-name "$FUNCTION_NAME" \
-             --zip-file fileb://lambda.zip \
+             --zip-file fileb://cloud/lambda.zip \
              --region "$AWS_REGION"
 
       - name: Deploy to S3
