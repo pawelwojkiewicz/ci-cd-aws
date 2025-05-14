@@ -25,7 +25,7 @@ export class ContactComponent {
     }
 
     submitForm() {
-        this.http.post('https://twoje-api.execute-api.eu-west-1.amazonaws.com/prod/contact', this.form)
+        this.http.post('https://tnad0d4y88.execute-api.eu-north-1.amazonaws.com/contact', this.form.value)
             .subscribe(() => alert('Wiadomość wysłana!'));
     }
 }

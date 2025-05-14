@@ -11,7 +11,8 @@
   "description": "",
   "dependencies": {
     "@aws-sdk/client-dynamodb": "^3.804.0",
-    "@aws-sdk/client-ses": "^3.804.0"
+    "@aws-sdk/client-ses": "^3.804.0",
+    "aws-sdk": "^2.1692.0"
   },
   "devDependencies": {
     "@types/node": "^22.15.17",

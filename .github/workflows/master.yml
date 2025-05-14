@@ -36,6 +36,10 @@ jobs:
            npm ci
            npx tsc
 
+      - name: Copy node_modules to dist
+        run: |
+          cp -r cloud/node_modules cloud/dist/lambdas/
+
         # 4. Zapakuj dist + node_modules do ZIP
       - name: Package Lambda
         run: |
