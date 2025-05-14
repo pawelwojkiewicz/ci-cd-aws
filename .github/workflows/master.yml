@@ -40,7 +40,7 @@ jobs:
       - name: Package Lambda
         run: |
           cd cloud/dist/lambdas
-           zip -r lambda.zip . 
+           zip -r ../../lambda.zip .
 
         # 5. Wypchnij ZIP do istniejącej funkcji
       - name: Update Lambda function code
