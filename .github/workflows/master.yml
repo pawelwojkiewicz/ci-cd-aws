@@ -39,9 +39,8 @@ jobs:
         # 4. Zapakuj dist + node_modules do ZIP
       - name: Package Lambda
         run: |
-           cd cloud/dist
-           zip -r ../lambda.zip . 
-           cd ..
+          cd cloud/dist/lambdas
+           zip -r lambda.zip . 
 
         # 5. Wypchnij ZIP do istniejącej funkcji
       - name: Update Lambda function code
